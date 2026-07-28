@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: rgb(248 250 252);
+  --foreground: rgb(0 29 72);
+  --card: rgb(255 255 255 / 0.7);
+  --card-foreground: rgb(0 29 72);
+  --popover: rgb(255 255 255);
+  --popover-foreground: rgb(0 29 72);
+  --primary: rgb(51 179 255);
+  --primary-foreground: rgb(0 29 72);
+  --secondary: rgb(226 244 255);
+  --secondary-foreground: rgb(0 29 72);
+  --muted: rgb(236 244 251);
+  --muted-foreground: rgb(71 98 130);
+  --accent: rgb(51 179 255 / 0.12);
+  --accent-foreground: rgb(0 29 72);
+  --destructive: rgb(239 68 68);
+  --destructive-foreground: rgb(250 250 250);
+  --border: rgb(0 29 72 / 0.1);
+  --input: rgb(0 29 72 / 0.15);
+  --ring: rgb(51 179 255 / 0.5);
+  --chart-1: rgb(51 179 255);
+  --chart-2: rgb(16 183 128);
+  --chart-3: rgb(139 92 246);
+  --chart-4: rgb(209 158 0);
+  --chart-5: rgb(0 29 72);
+  --sidebar: rgb(255 255 255 / 0.6);
+  --sidebar-foreground: rgb(0 29 72);
+  --sidebar-primary: rgb(51 179 255);
+  --sidebar-primary-foreground: rgb(0 29 72);
+  --sidebar-accent: rgb(51 179 255 / 0.12);
+  --sidebar-accent-foreground: rgb(0 29 72);
+  --sidebar-border: rgb(0 29 72 / 0.08);
+  --sidebar-ring: rgb(51 179 255 / 0.5);
+
+  --brand-sky: rgb(51 179 255);
+  --brand-navy: rgb(0 29 72);
+
+  --font-sans: Inter, sans-serif;
+  --font-serif: PT Serif, serif;
+  --font-mono: JetBrains Mono, monospace;
+
+  --radius: 1.25rem;
+
+  --shadow-2xs: 0px 3px 5px 0.5px rgb(9 9 11 / 0.04);
+  --shadow-xs: 0px 3px 5px 0.5px rgb(9 9 11 / 0.04);
+  --shadow-sm: 0px 3px 5px 0.5px rgb(9 9 11 / 0.08), 0px 1px 2px -0.5px rgb(9 9 11 / 0.08);
+  --shadow: 0px 3px 5px 0.5px rgb(9 9 11 / 0.08), 0px 1px 2px -0.5px rgb(9 9 11 / 0.08);
+  --shadow-md: 0px 3px 5px 0.5px rgb(9 9 11 / 0.08), 0px 2px 4px -0.5px rgb(9 9 11 / 0.08);
+  --shadow-lg: 0px 3px 5px 0.5px rgb(9 9 11 / 0.08), 0px 4px 6px -0.5px rgb(9 9 11 / 0.08);
+  --shadow-xl: 0px 3px 5px 0.5px rgb(9 9 11 / 0.08), 0px 8px 10px -0.5px rgb(9 9 11 / 0.08);
+  --shadow-2xl: 0px 3px 5px 0.5px rgb(9 9 11 / 0.20);
+
+  --tracking-normal: -0.025em;
+}
+
+.dark {
+  --background: rgb(15 23 42);
+  --foreground: rgb(226 244 255);
+  --card: rgb(0 29 72 / 0.55);
+  --card-foreground: rgb(226 244 255);
+  --popover: rgb(2 20 48);
+  --popover-foreground: rgb(226 244 255);
+  --primary: rgb(51 179 255);
+  --primary-foreground: rgb(0 29 72);
+  --secondary: rgb(0 29 72 / 0.7);
+  --secondary-foreground: rgb(226 244 255);
+  --muted: rgb(0 29 72 / 0.5);
+  --muted-foreground: rgb(148 184 219);
+  --accent: rgb(51 179 255 / 0.18);
+  --accent-foreground: rgb(226 244 255);
+  --destructive: rgb(255 100 103);
+  --destructive-foreground: rgb(251 245 246);
+  --border: rgb(255 255 255 / 0.1);
+  --input: rgb(255 255 255 / 0.15);
+  --ring: rgb(51 179 255 / 0.5);
+  --chart-1: rgb(51 179 255);
+  --chart-2: rgb(0 188 125);
+  --chart-3: rgb(254 154 0);
+  --chart-4: rgb(173 70 255);
+  --chart-5: rgb(255 32 86);
+  --sidebar: rgb(0 29 72 / 0.55);
+  --sidebar-foreground: rgb(226 244 255);
+  --sidebar-primary: rgb(51 179 255);
+  --sidebar-primary-foreground: rgb(0 29 72);
+  --sidebar-accent: rgb(51 179 255 / 0.18);
+  --sidebar-accent-foreground: rgb(226 244 255);
+  --sidebar-border: rgb(255 255 255 / 0.1);
+  --sidebar-ring: rgb(51 179 255 / 0.5);
+
+  --brand-sky: rgb(51 179 255);
+  --brand-navy: rgb(0 29 72);
+
+  --shadow-2xs: 0 1px 3px 0px rgb(0 0 0 / 0.05);
+  --shadow-xs: 0 1px 3px 0px rgb(0 0 0 / 0.05);
+  --shadow-sm: 0 1px 3px 0px rgb(0 0 0 / 0.10), 0 1px 2px -1px rgb(0 0 0 / 0.10);
+  --shadow: 0 1px 3px 0px rgb(0 0 0 / 0.10), 0 1px 2px -1px rgb(0 0 0 / 0.10);
+  --shadow-md: 0 1px 3px 0px rgb(0 0 0 / 0.10), 0 2px 4px -1px rgb(0 0 0 / 0.10);
+  --shadow-lg: 0 1px 3px 0px rgb(0 0 0 / 0.10), 0 4px 6px -1px rgb(0 0 0 / 0.10);
+  --shadow-xl: 0 1px 3px 0px rgb(0 0 0 / 0.10), 0 8px 10px -1px rgb(0 0 0 / 0.10);
+  --shadow-2xl: 0 1px 3px 0px rgb(0 0 0 / 0.25);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-serif: var(--font-serif);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --shadow-2xs: var(--shadow-2xs);
+  --shadow-xs: var(--shadow-xs);
+  --shadow-sm: var(--shadow-sm);
+  --shadow: var(--shadow);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+  --shadow-2xl: var(--shadow-2xl);
+
+  --tracking-tighter: calc(var(--tracking-normal) - 0.05em);
+  --tracking-tight: calc(var(--tracking-normal) - 0.025em);
+  --tracking-normal: var(--tracking-normal);
+  --tracking-wide: calc(var(--tracking-normal) + 0.025em);
+  --tracking-wider: calc(var(--tracking-normal) + 0.05em);
+  --tracking-widest: calc(var(--tracking-normal) + 0.1em);
+}
+
+body {
+  letter-spacing: var(--tracking-normal);
+}
+
+.glass-panel {
+  background: var(--card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+}
+
+.glow-sky {
+  box-shadow: 0 8px 30px -8px rgb(51 179 255 / 0.45);
+}
